@@ -1,0 +1,390 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  overflow-x: hidden;
+  background: #0a0a0a;
+  font-family: 'Poppins', sans-serif;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00ffcc;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+  position: relative;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px 0;
+  transition: color 0.3s;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00ffcc;
+  transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin: 0;
+  background: linear-gradient(45deg, #00ffcc, #00ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.scroll-down {
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #00ffcc;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-20px);
+  }
+  60% {
+      transform: translateY(-10px);
+  }
+}
+
+
+.content-section {
+  padding: 100px 0;
+}
+
+.content-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 20px 0;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+}
+
+.content-box h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #00ffcc, #00ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+
+
+.timeline-event {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+  position: relative;
+}
+
+.timeline-event:nth-child(odd) .timeline-content {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.timeline-event:nth-child(even) .timeline-content {
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.timeline-date {
+  width: 20%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #00ffcc;
+}
+
+.timeline-content {
+  width: 70%;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);
+}
+
+
+.scientist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.scientist {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);
+}
+
+.scientist h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #00ffcc;
+}
+
+.learn-more {
+  background: #00ffcc;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #0a0a0a;
+  font-weight: bold;
+}
+
+
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.model {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);
+}
+
+.model h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #00ffcc;
+}
+
+
+.interactive-diagram {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+
+.thermo-law {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);
+}
+
+.thermo-law h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #00ffcc;
+}
+
+.simulate {
+  background: #00ffcc;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #0a0a0a;
+  font-weight: bold;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  margin-top: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #00ffcc;
+}
+
+#modal-image {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+
+.diagram {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.spinner {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+.circle, .ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #00ffcc;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+}
+
+.ring {
+  border-color: transparent;
+  border-top-color: #00ccff;
+  border-bottom-color: #00ccff;
+  animation: spin-ring 5s linear infinite;
+}
+
+@keyframes spin-ring {
+  0% {
+      transform: rotateX(60deg) rotateZ(0deg);
+  }
+  100% {
+      transform: rotateX(60deg) rotateZ(360deg);
+  }
+}
+
+.circle {
+  animation: spin-circle 3s linear infinite;
+  border: 5px solid #00ffcc;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+}
+
+@keyframes spin-circle {
+  0% {
+      transform: rotateY(60deg) rotateZ(0deg);
+  }
+  100% {
+      transform: rotateY(60deg) rotateZ(360deg);
+  }
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+ul li:last-child {
+  margin-right: 40px; 
+}

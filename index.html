@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpetual Motion: Myth vs. Reality</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particles"></canvas>
+    <nav>
+        <div class="logo">Perpetual Motion</div>
+        <ul>
+            <li><a href="#what">What is it</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#scientists">Scientists</a></li>
+            <li><a href="#models">Models</a></li>
+            <li><a href="#interactive">Why it fails</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section class="hero">
+            <h1>Understanding Perpetual Motion</h1>
+            <p>Exploring the science, history, and myths behind perpetual motion.</p>
+            <a href="#what" class="scroll-down">▼</a>
+        </section>
+        <section id="what" class="content-section">
+            <div class="content-box">
+                <h2>What is Perpetual Motion?</h2>
+                <p>Perpetual motion refers to the idea of a machine that can operate indefinitely without an external energy source.</p>
+                <div class="diagram">
+                    <div class="spinner">
+                        <div class="circle"></div>
+                        <div class="ring"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="history" class="content-section">
+            <div class="content-box">
+                <h2>History of Perpetual Motion</h2>
+                <p>From ancient designs to modern attempts, discover the fascinating history of perpetual motion machines.</p>
+                <div class="timeline">
+                    <div class="timeline-event">
+                        <div class="timeline-date">~300 BCE</div>
+                        <div class="timeline-content">
+                            <h3>Early Mechanical Concepts</h3>
+                            <p>Archimedes explored principles of mechanics like levers and pulleys, laying the groundwork for future exploration of motion, though he did not propose perpetual motion explicitly.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-date">~1150 CE</div>
+                        <div class="timeline-content">
+                            <h3>Bhaskara II's Perpetual Motion Wheel</h3>
+                            <p>The Indian mathematician Bhaskara II conceptualized a wheel with unbalanced weights, one of the first known attempts to design a perpetual motion machine.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-date">1235 CE</div>
+                        <div class="timeline-content">
+                            <h3>Villard de Honnecourt’s Sketches</h3>
+                            <p>French scholar Villard de Honnecourt created designs for a perpetual motion device using hinged weights, though they were impractical due to energy conservation laws.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-date">14th Century</div>
+                        <div class="timeline-content">
+                            <h3>Water Wheels</h3>
+                            <p>Arab inventors worked on gravity-based and water wheel perpetual motion machines, but all failed due to energy losses from friction and inefficiency.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="timeline-date">15th Century</div>
+                      <div class="timeline-content">
+                          <h3>Leonardo da Vinci’s Analysis</h3>
+                          <p>Leonardo da Vinci debunked perpetual motion devices, demonstrating in his writings that energy losses, such as friction, make them impossible.</p>
+                      </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-date">1577 CE</div>
+                        <div class="timeline-content">
+                            <h3>Simon Stevin’s Mechanical Equilibrium</h3>
+                            <p>Simon Stevin introduced the concept of mechanical equilibrium, showing why perpetual motion devices based on unbalanced forces could not work.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="timeline-date">1687 CE</div>
+                      <div class="timeline-content">
+                          <h3>Isaac Newton’s Laws of Motion</h3>
+                          <p>Sir Isaac Newton’s laws of motion explained how friction and energy dissipation prevent perpetual motion in physical systems.</p>
+                      </div>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="timeline-date">18th Century</div>
+                      <div class="timeline-content">
+                          <h3>Jean-Baptiste d’Alembert’s Energy Principles</h3>
+                          <p>D’Alembert clarified mechanical energy principles, emphasizing that machines cannot produce more energy than they consume.</p>
+                      </div>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="timeline-date">1827 CE</div>
+                      <div class="timeline-content">
+                          <h3>Sadi Carnot and Thermodynamics</h3>
+                          <p>Sadi Carnot introduced thermodynamic principles, showing that no engine can be perfectly efficient, effectively disproving perpetual motion.
+                          </p>
+                      </div>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="timeline-date">1850 CE</div>
+                      <div class="timeline-content">
+                          <h3>The Laws of Thermodynamics</h3>
+                          <p>James Prescott Joule and Lord Kelvin formalized the First and Second Laws of Thermodynamics, conclusively proving perpetual motion is impossible.
+                          </p>
+                      </div>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="timeline-date">Late 19th Century</div>
+                      <div class="timeline-content">
+                          <h3>Patent Offices Reject Perpetual Motion Machines</h3>
+                          <p>Patent offices began refusing perpetual motion applications, citing established thermodynamic laws.
+                          </p>
+                      </div>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="timeline-date">1920s-1950s</div>
+                      <div class="timeline-content">
+                          <h3>Perpetual Motion Pseudoscience</h3>
+                          <p>Despite scientific consensus, inventors continued proposing devices based on magnetism, gravity, and fluid dynamics, all of which failed.
+                          </p>
+                      </div>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="timeline-date">1940s</div>
+                      <div class="timeline-content">
+                          <h3>R. A. Ford’s Satirical Works</h3>
+                          <p>Engineer R. A. Ford wrote satirical pieces mocking perpetual motion designs, highlighting their flaws and pseudoscientific nature.
+                          </p>
+                      </div>
+                    </div>
+                    <div class="timeline-event">
+                      <div class="timeline-date">2000s to Present</div>
+                      <div class="timeline-content">
+                          <h3>Advances in Modern Science</h3>
+                          <p>Modern technology, including superconductors and highly efficient motors, achieves near-frictionless motion but adheres to thermodynamic limits, reinforcing the impossibility of perpetual motion.
+                          </p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="scientists" class="content-section">
+            <div class="content-box">
+                <h2>Key Scientists and Inventors</h2>
+                <p>Learn about the minds behind perpetual motion concepts and their contributions.</p>
+                <div class="scientist-grid">
+                    <div class="scientist">
+                        <h3>Bhaskara II</h3>
+                        <p>Designed the first known perpetual motion machine.</p>
+                        <button class="learn-more" data-scientist="bhaskara">Learn More</button>
+                    </div>
+                    <div class="scientist">
+                        <h3>Johann Bessler</h3>
+                        <p>Created the controversial Bessler's Wheel.</p>
+                        <button class="learn-more" data-scientist="bessler">Learn More</button>
+                    </div>
+                    <div class="scientist">
+                        <h3>Leonardo da Vinci</h3>
+                        <p>Sketch designs for perpetual motion machines.</p>
+                        <button class="learn-more" data-scientist="davinci">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="models" class="content-section">
+            <div class="content-box">
+                <h2>Attempted Models of Perpetual Motion</h2>
+                <p>Explore the most famous designs and why they failed.</p>
+                <div class="model-grid">
+                    <div class="model">
+                        <h3>Bhaskara's Wheel</h3>
+                        <p>A wheel with mercury-filled tubes that was supposed to rotate forever.</p>
+                        <img src="https://dsimanek.vialattea.net/museum/hamr-t.gif" style="border-radius: 15px; width: 100%;">
+                    </div>
+                    <div class="model">
+                        <h3>Bessler's Wheel</h3>
+                        <p>An 18th-century design that claimed to achieve perpetual motion.</p>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/BesslerOrffyreusWheel.png/269px-BesslerOrffyreusWheel.png" style="border-radius: 15px; width: 100%;">
+                    </div>
+                    <div class="model">
+                        <h3>Overbalanced Wheels</h3>
+                        <p>Designs that rely on shifting weights to maintain motion.</p>
+                        <img src="https://etc.usf.edu/clipart/11300/11348/perpetual_11348_lg.gif" style="border-radius: 15px; width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="interactive" class="content-section">
+            <div class="content-box">
+                <h2>Why Perpetual Motion Fails</h2>
+                <p>Why perpetual motion machines won't work</p>
+                <div class="interactive-diagram">
+                    <div class="thermo-law">
+                        <h3>First Law of Thermodynamics</h3>
+                        <p>Energy cannot be created or destroyed.</p>
+                        <button class="simulate" data-law="first">Expand</button>
+                    </div>
+                    <div class="thermo-law">
+                        <h3>Second Law of Thermodynamics</h3>
+                        <p>Energy systems tend toward entropy (disorder).</p>
+                        <button class="simulate" data-law="second">Expand</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="scientist-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt="Scientist Image">
+            <p id="modal-description"></p>
+        </div>
+    </div>
+    <div id="interactive-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="interactive-modal-title"></h2>
+            <p id="interactive-modal-description"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
